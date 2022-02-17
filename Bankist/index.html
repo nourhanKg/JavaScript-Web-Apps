@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/5ed78bfa33.js" crossorigin="anonymous"></script>
+    <title>Bankist</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1 class="head">Log in to get started!</h1>
+                <img src="./logo.png" alt="logo">
+            </div>
+            <form class="form">
+                <input type="text" name="user" placeholder="User" required class="input-login user-login">
+                <input type="password" name="pin" placeholder="PIN" required class="input-login PIN-login">
+                <input type="submit" name="submitLogin" value="&rarr;" class="input-btn">
+            </form>
+        </nav>
+    </header>
+    <main class="app">
+        <div class="balance">
+            <div>
+                <h2>Current Balance</h2>
+                <p class="balance-date">As of <span class="myDate">20/2339</span></p>
+            </div>
+            <div class="value">25 952,59 &euro;</div>
+        </div>
+        <div class="summary">
+            <div>
+                <span class="summary-label">in</span>
+                <span class="summary-value in-value">0000&euro;</span>
+                <span class="summary-label">out</span>
+                <span class="summary-value out-value">0000&euro;</span>
+                <span class="summary-label">interest</span>
+                <span class="summary-value interest-value">0000&euro;</span>
+            </div>
+            <button class="sort-btn">Sort &downarrow;</button>
+            <p>You will be loged out in <span class="logout-timer"></span></p>
+        </div>
+        <div class="actions-grid">
+            <div class="actions">
+                <div class="row">
+                    <p class="action-label withdrawl">2 Withdrawal</p>
+                    <p class="action-date">01/02/2020</p>
+                    <div class="amount">-3000 &euro;</div>
+                </div>
+                <div class="row">
+                    <p class="action-label deposit">1 Deposit</p>
+                    <p class="action-date">10/04/2019</p>
+                    <div class="amount">1000 &euro;</div>
+                </div>
+                
+            </div>
+            <div class="action transfer">
+                <label for="transfer-form">Transfer Money</label>
+                <form class="transfer-form" id="transfer-form">
+                    <input type="text" name="trasfereeAcc" required class="action-input transfer-input transfereeAcc" id="transfreeAcc">
+                    <input type="number" name="transferedAmount" required class="action-input transfer-input transferedAmount" id="transferedAmount">
+                    <input type="submit" value="&rarr;" class="action-btn transfer-btn" name="submitTransfer">
+                    <label for="transfereeAcc">Transfer To</label>
+                    <label for="transferedAmount">Amount</label>
+                </form>
+            </div>
+            <div class="action loan">
+                <label for="loan-form">Request Loan</label>
+                <form class="loan-form" id="loan-form">
+                    <input type="number" name="loanedAmount" required class="action-input loan-input loanedAmount" id="loanedAmount">
+                    <input type="submit" value="&rarr;" class="action-btn loan-btn" name="submitDeposit">
+                    <label for="loanedAmount">Amount</label>
+                </form>
+            </div>
+            <div class="action close">
+                <label for="close-form">Close Account</label>
+                <form class="close-form" id="close-form">
+                    <input type="text" name="user" required class="action-input close-input user-close" id="user">
+                    <input type="password" name="pin" required class="action-input close-input PIN-close" id="PIN">
+                    <input type="submit" value="&rarr;" class="action-btn close-btn" name="submitTransfer">
+                    <label for="user">Confirm User</label>
+                    <label for="PIN">Confirm PIN</label>
+                </form>
+            </div>
+        </div>
+    </main>
+    </div>
+<script src="./main.js"></script>
+</body>
+</html>
